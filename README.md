@@ -1,2 +1,2 @@
-# my-tabbed
+# tabbed
 My build of suckless tabbed
