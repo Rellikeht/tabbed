@@ -10,10 +10,12 @@ BIN = ${OBJ:.o=}
 all: options ${BIN}
 
 options:
+
 	@echo tabbed build options:
 	@echo "CFLAGS   = ${CFLAGS}"
 	@echo "LDFLAGS  = ${LDFLAGS}"
 	@echo "CC       = ${CC}"
+	@echo "PREFIX 	= ${PREFIX}"
 
 .c.o:
 	@echo CC $<

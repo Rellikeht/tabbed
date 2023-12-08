@@ -4,8 +4,8 @@ VERSION = 0.6
 # Customize below to fit your system
 
 # paths
-PREFIX = /usr/local
-MANPREFIX = ${PREFIX}/share/man
+PREFIX ?= /usr/local
+MANPREFIX ?= ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
@@ -26,12 +26,11 @@ CFLAGS = -std=c99 -pedantic -Wall -O2 ${INCS} ${CPPFLAGS} # -mmusl
 LDFLAGS = -s ${LIBS}
  
  # flags
- CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
+CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
 
 # Solaris
 #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
 #LDFLAGS = ${LIBS}
 
 # compiler and linker
-CC = gcc
-#CC = tcc
+CC ?= gcc
