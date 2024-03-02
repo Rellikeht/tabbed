@@ -12,7 +12,9 @@ X11LIB = /usr/X11R6/lib
 
 # freetype
 FREETYPELIBS = -lfontconfig -lXft
-FREETYPEINC = /usr/local/include/freetype2
+#FREETYPEINC = /usr/local/include/freetype2
+FREETYPEINC = /usr/include/freetype2
+#FEETYPEINC = `pkg-config --cflags freetype2`
 # OpenBSD (uncomment)
 #FREETYPEINC = ${X11INC}/freetype2
 
