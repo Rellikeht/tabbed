@@ -26,7 +26,7 @@
           inherit name system src;
 
           PREFIX = "$(out)";
-          CC = pkgs.gcc;
+          CC = pkgs.stdenv.cc;
 
           buildInputs = with pkgs; [
             xorg.libX11
