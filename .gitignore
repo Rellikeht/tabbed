@@ -1,0 +1,6 @@
+*.swp
+*.swo
+.direnv
+
+build/
+patched/

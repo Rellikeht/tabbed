@@ -1,0 +1,23 @@
+diff -up original/config.def.h modified/config.def.h
+--- original/config.def.h	2025-09-17 22:52:18.871600128 +0200
++++ modified/config.def.h	2025-09-17 22:52:51.335069840 +0200
+@@ -14,6 +14,7 @@ static char* titletrim    = "...";
+ static int tabwidth       = 200;
+ static int focusnew       = 1;
+ static int urgentswitch   = 0;
++static int barHeight      = 24;
+ 
+ /*
+  * Where to place a new tab when it is opened. When npisrelative is True,
+diff -up original/tabbed.c modified/tabbed.c
+--- original/tabbed.c	2025-09-17 22:52:18.871600128 +0200
++++ modified/tabbed.c	2025-09-17 22:53:02.910805123 +0200
+@@ -1110,7 +1110,7 @@ setup(void)
+ 	screen = DefaultScreen(dpy);
+ 	root = RootWindow(dpy, screen);
+ 	initfont(font);
+-	vbh = dc.h = dc.font.height + 2;
++	vbh = dc.h = barHeight;
+ 
+ 	/* init atoms */
+ 	wmatom[WMDelete] = XInternAtom(dpy, "WM_DELETE_WINDOW", False);

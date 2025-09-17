@@ -33,9 +33,9 @@ index fe38b9d..352dab2 100644
 --- a/tabbed.c
 +++ b/tabbed.c
 @@ -127,6 +127,7 @@ static void sendxembed(int c, long msg, long detail, long d1, long d2);
+ static void sendxembed(int c, long msg, long detail, long d1, long d2);
  static void setcmd(int argc, char *argv[], int);
  static void setup(void);
- static void sigchld(int unused);
 +static void showbar(const Arg *arg);
  static void spawn(const Arg *arg);
  static int textnw(const char *text, unsigned int len);
@@ -44,8 +44,8 @@ index fe38b9d..352dab2 100644
  	[MapRequest] = maprequest,
  	[PropertyNotify] = propertynotify,
  };
--static int bh, wx, wy, ww, wh;
-+static int bh, wx, wy, ww, wh, vbh;
+-static int bh, obh, wx, wy, ww, wh;
++static int bh, obh, wx, wy, ww, wh, vbh;
  static unsigned int numlockmask;
  static Bool running = True, nextfocus, doinitspawn = True,
              fillagain = False, closelastclient = False,
