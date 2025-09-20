@@ -99,10 +99,14 @@ static const Key keys[] = {
 
     {MODKEY, XK_Control_L, showbar, {.i = 1}},
     {MODKEY, XK_Control_R, showbar, {.i = 1}},
+    {ControlMask, XK_Alt_L, showbar, {.i = 1}},
+    {ControlMask, XK_Alt_R, showbar, {.i = 1}},
 };
 
 static Key keyreleases[] = {
-    /* modifier             key          function     argument */
-    {CTRLMOD, XK_Control_L, showbar, {.i = 0}},
-    {CTRLMOD, XK_Control_R, showbar, {.i = 0}},
+    /* modifier   key           function    argument */
+    {CTRLMOD,     XK_Control_L, showbar,    {.i = 0}},
+    {CTRLMOD,     XK_Control_R, showbar,    {.i = 0}},
+    {CTRLMOD,     XK_Alt_L,     showbar,    {.i = 0}},
+    {CTRLMOD,     XK_Alt_R,     showbar,    {.i = 0}},
 };

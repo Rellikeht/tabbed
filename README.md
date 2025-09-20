@@ -9,9 +9,11 @@ In order to build tabbed you need the Xlib header files.
 ## Installation
 
 If you use nix than just use it as any other flake.
-Otherwise use standard
+Otherwise
 
 ```
+./patch.sh
+cd patched
 make clean install
 ```
 
@@ -32,3 +34,9 @@ Sources are in `patches` directory.
 
 - hidetabs (fixed to match new version of tabbed)
 - bar-height (fixed to play along with others)
+
+## Other modifications
+
+- customization of course
+- adjustment of makefile for structure of this repo
+- custom config.bsd.mk for freebsd (from previous version, unstested)
