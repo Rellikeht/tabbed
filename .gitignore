@@ -1,6 +1,13 @@
+*
+!*.*
+
+*~
 *.swp
 *.swo
 .direnv
 
 build/
 patched/
+
+*.o
+*.so
