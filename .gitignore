@@ -1,5 +1,8 @@
-*
+**/*
 !*.*
+!Makefile
+!LICENSE
+!src/
 
 *~
 *.swp

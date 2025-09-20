@@ -1,11 +1,5 @@
-# tabbed version
-VERSION = 0.6
-
-# Customize below to fit your system
-
 # paths
 PREFIX = /usr/local
-MANPREFIX = ${PREFIX}/share/man
 
 X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
@@ -25,8 +19,8 @@ CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
 CFLAGS = -std=c99 -pedantic -Wall -O2 ${INCS} ${CPPFLAGS} # -mmusl 
 LDFLAGS = -s ${LIBS}
  
- # flags
- CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
+# flags
+CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE
 
 # Solaris
 #CFLAGS = -fast ${INCS} -DVERSION=\"${VERSION}\"
@@ -34,4 +28,3 @@ LDFLAGS = -s ${LIBS}
 
 # compiler and linker
 CC = gcc
-#CC = tcc

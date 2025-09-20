@@ -2,8 +2,8 @@
 
 set -e pipefail
 
-SCRIPT_DIR="${0%/*}"
-SCRIPT_DIR="$(readlink -f "$SCRIPT_DIR")"
+SCRIPT_DIR="$(readlink -f "$0")"
+SCRIPT_DIR="${SCRIPT_DIR%/*}"
 PATCH_DIR="$SCRIPT_DIR/patches"
 SRC="$SCRIPT_DIR/src"
 PATCHED="$SCRIPT_DIR/patched"
@@ -23,3 +23,6 @@ do
 done
 
 cp "$SCRIPT_DIR/config.h" "$PATCHED"
+if [ "$(uname)" = "FreeBSD" ]; then
+    cp "$SCRIPT_DIR/config.bsd.mk" "$PATCHED/config.mk"
+fi
