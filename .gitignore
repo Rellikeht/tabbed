@@ -1,13 +1,15 @@
 **/*
 !*.*
-!Makefile
-!LICENSE
-!src/
 
 *~
 *.swp
 *.swo
 .direnv
+
+!Makefile
+!LICENSE
+!src/
+!patches/
 
 build/
 patched/

@@ -39,4 +39,4 @@ Sources are in `patches` directory.
 
 - customization of course
 - adjustment of makefile for structure of this repo
-- custom config.bsd.mk for freebsd (from previous version, unstested)
+- custom config.freebsd.mk for freebsd (from previous version, unstested)
