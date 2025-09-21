@@ -3,16 +3,16 @@
 /* appearance */
 #ifdef __linux__
 static const char *font =
-    "MesloLGS NF:pixelsize=13:antialias=true:autohint=true";
+    "MesloLGS NF:pixelsize=14:antialias=true:autohint=true";
 #else
-static const char *font = "MesloLGS:pixelsize=13:antialias=true:autohint=true";
+static const char *font = "MesloLGS:pixelsize=14:antialias=true:autohint=true";
 #endif
 
 static char *normbgcolor = "#01080b";
 static char *normfgcolor = "#086aab";
-static char *selbgcolor = "#18ea4f";
+static char *selbgcolor = "#18da4f";
 static char *selfgcolor = "#01080b";
-static char *urgbgcolor = "#d82452";
+static char *urgbgcolor = "#e82442";
 static char *urgfgcolor = "#010b08";
 
 static char *before = "<";
@@ -21,7 +21,8 @@ static char *titletrim = "...";
 static int tabwidth = 200;
 static int focusnew = 1;
 static int urgentswitch = 0;
-static int barHeight = 24;
+// static int barHeight = 24;
+#define barHeight dc.font.height+2;
 
 /*
  * Where to place a new tab when it is opened. When npisrelative is True,
