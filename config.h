@@ -2,10 +2,9 @@
 
 /* appearance */
 #ifdef __linux__
-static const char *font =
-    "MesloLGS NF:pixelsize=14:antialias=true:autohint=true";
+static const char *font = "MesloLGS NF:size=13:antialias=true:autohint=true";
 #else
-static const char *font = "MesloLGS:pixelsize=14:antialias=true:autohint=true";
+static const char *font = "MesloLGS:size=13:antialias=true:autohint=true";
 #endif
 
 static char *normbgcolor = "#01080b";
