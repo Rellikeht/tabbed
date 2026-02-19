@@ -2,21 +2,31 @@
 
 /* appearance */
 #ifdef __linux__
-static const char *font = "MesloLGS NF:size=13:antialias=true:autohint=true";
+static char font[256] = "MesloLGS:size=13:antialias=true:autohint=true";
 #else
-static const char *font = "MesloLGS:size=13:antialias=true:autohint=true";
+static char font[256] = "MesloLGS:size=13:antialias=true:autohint=true";
 #endif
 
-static char *normbgcolor = "#01080b";
-static char *normfgcolor = "#086aab";
-static char *selbgcolor = "#18da4f";
-static char *selfgcolor = "#01080b";
-static char *urgbgcolor = "#e82442";
-static char *urgfgcolor = "#010b08";
+static char normbgcolor_buf[256] = "#01080b";
+static char normfgcolor_buf[256] = "#086aab";
+static char selbgcolor_buf[256] = "#18da4f";
+static char selfgcolor_buf[256] = "#01080b";
+static char urgbgcolor_buf[256] = "#e82442";
+static char urgfgcolor_buf[256] = "#010b08";
+static char before_buf[256] = "<";
+static char after_buf[256] = ">";
+static char titletrim_buf[256] = "...";
 
-static char *before = "<";
-static char *after = ">";
-static char *titletrim = "...";
+static char *normbgcolor = normbgcolor_buf;
+static char *normfgcolor = normfgcolor_buf;
+static char *selbgcolor = selbgcolor_buf;
+static char *selfgcolor = selfgcolor_buf;
+static char *urgbgcolor = urgbgcolor_buf;
+static char *urgfgcolor = urgfgcolor_buf;
+static char *before = before_buf;
+static char *after = after_buf;
+static char *titletrim = titletrim_buf;
+
 static int tabwidth = 200;
 static int focusnew = 1;
 static int urgentswitch = 0;
@@ -47,16 +57,16 @@ static int npisrelative = 1;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-    {"font", STRING, &font},
-    {"normbgcolor", STRING, &normbgcolor},
-    {"normfgcolor", STRING, &normfgcolor},
-    {"selbgcolor", STRING, &selbgcolor},
-    {"selfgcolor", STRING, &selfgcolor},
-    {"urgbgcolor", STRING, &urgbgcolor},
-    {"urgfgcolor", STRING, &urgfgcolor},
-    {"before", STRING, &before},
-    {"after", STRING, &after},
-    {"titletrim", STRING, &titletrim},
+    {"font", STRING, font},
+    {"normbgcolor", STRING, normbgcolor_buf},
+    {"normfgcolor", STRING, normfgcolor_buf},
+    {"selbgcolor", STRING, selbgcolor_buf},
+    {"selfgcolor", STRING, selfgcolor_buf},
+    {"urgbgcolor", STRING, urgbgcolor_buf},
+    {"urgfgcolor", STRING, urgfgcolor_buf},
+    {"before", STRING, before_buf},
+    {"after", STRING, after_buf},
+    {"titletrim", STRING, titletrim_buf},
     {"tabwidth", INTEGER, &tabwidth},
     {"focusnew", INTEGER, &focusnew},
     {"urgentswitch", INTEGER, &urgentswitch},
