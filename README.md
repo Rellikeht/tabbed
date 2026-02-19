@@ -28,10 +28,11 @@ Sources are in `patches` directory.
 ### In original form
 
 - keyrelease
-- xresources
 
 ### Modified
 
+- xresources - fixed improper strings handling, made config use proper 
+  buffers and pointers instead of at hoc constants
 - hidetabs (fixed to match new version of tabbed)
 - bar-height (fixed to play along with others)
 
