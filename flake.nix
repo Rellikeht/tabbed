@@ -29,8 +29,8 @@
           CC = pkgs.stdenv.cc;
 
           buildInputs = with pkgs; [
-            xorg.libX11
-            xorg.libXft
+            libX11
+            libXft
           ];
 
           buildPhase = ''
