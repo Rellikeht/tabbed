@@ -5,13 +5,13 @@ VERSION = 0.9
 
 # paths
 PREFIX ?= /usr/local
-MANPREFIX = ${PREFIX}/share/man
-DOCPREFIX = ${PREFIX}/share/doc/${NAME}
+MANPREFIX ?= ${PREFIX}/share/man
+DOCPREFIX ?= ${PREFIX}/share/doc/${NAME}
 
 # use system flags.
-TABBED_CFLAGS ?= -I/usr/X11R6/include -I/usr/include/freetype2 ${CFLAGS}
+TABBED_CFLAGS ?= -I/usr/X11R6/include -I/usr/include/freetype2 ${CFLAGS} -O2 -march=native -mtune=native
 TABBED_LDFLAGS ?= -L/usr/X11R6/lib -lX11 -lfontconfig -lXft ${LDFLAGS}
-TABBED_CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700L
+TABBED_CPPFLAGS ?= -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700L
 
 # OpenBSD (uncomment)
 #TABBED_CFLAGS = -I/usr/X11R6/include -I/usr/X11R6/include/freetype2 ${CFLAGS}

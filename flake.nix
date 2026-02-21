@@ -27,6 +27,7 @@
 
           PREFIX = "$(out)";
           CC = pkgs.stdenv.cc;
+          impureUseNativeOptimizations = true;
 
           buildInputs = with pkgs; [
             libX11
